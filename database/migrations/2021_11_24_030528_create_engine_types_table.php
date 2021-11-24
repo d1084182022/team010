@@ -15,6 +15,7 @@ class CreateEngineTypesTable extends Migration
     {
         Schema::create('engine_types', function (Blueprint $table) {
             $table->id();
+            $table->string('engine_type')->comment('引擎形式');
             $table->timestamps();
         });
     }
