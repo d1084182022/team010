@@ -12,9 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-echo"hello world";
+
 
 Route::get('/', function () {
 
-    return 'hello world';
+    return "hello world";
 });
