@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\MotorcyclesController;
+use App\Http\Controllers\BrandsController;
+use App\Http\Controllers\EngineTypesController;
 use Illuminate\Support\Facades\Route;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-
-    return "hello world";
+    return "Hello World";
 });
+route::resource("motorcycles", MotorcyclesController::class)  ;
+route::resource("brands", BrandsController::class)  ;
+route::resource("enginetypes", EngineTypesController::class)  ;
