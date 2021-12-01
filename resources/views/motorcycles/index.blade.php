@@ -18,6 +18,7 @@
         <th>油箱容量</th>
         <th>座高</th>
         <th>售價</th>
+        <th>操作</th>
     </tr>
 
     @foreach($motorcycles as $motorcycle)
@@ -33,6 +34,11 @@
             <td>{{$motorcycle->tank_capacity}}</td>
             <td>{{$motorcycle->sitting_height}}</td>
             <td>{{$motorcycle->price}}</td>
+            <td>
+            <a href="motorcycles/{{$motorcycle->id}}">
+                詳細資料
+            </a>
+            </td>
         </tr>
     @endforeach
 </table>

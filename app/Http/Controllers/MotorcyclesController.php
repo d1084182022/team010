@@ -49,6 +49,7 @@ class MotorcyclesController extends Controller
     public function show($id)
     {
         //
+        return '搜尋單一一筆資料 id=' .$id ;
     }
 
     /**
