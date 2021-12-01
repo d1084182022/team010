@@ -17,7 +17,7 @@ class CreateMotorcyclesTable extends Migration
             $table->id();
             $table->integer('bid')->unsigned()->comment('廠牌');
             $table->string('name')->comment('車名');
-            $table->date('year')->nullable()->comment('製造年份');
+            $table->integer('year')->nullable()->comment('製造年份');
             $table->integer('CC')->unsigned()->nullable()->comment('CC數');
             $table->integer('eid')->unsigned()->comment('引擎形式');
             $table->double('horsepower')->unsigned()->nullable()->comment('馬力');

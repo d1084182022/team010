@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\QueryException;
 
 class BrandsTableSeeder extends Seeder
 {
@@ -27,7 +28,8 @@ class BrandsTableSeeder extends Seeder
 ];
         return $brands[rand(0, count($brands)-1)];
     }
-    public function generateRandomCountry() {
+    public function generateRandomCountries(): string
+    {
         $countries = [
             '日本',
             '義大利',
@@ -40,12 +42,12 @@ class BrandsTableSeeder extends Seeder
     {
         //
         for ($i=0; $i<9; $i++) {
-            $countries = $this->generateRandomCountry();
+            $countries = $this->generateRandomCountries();
             $brands=$this->generateRandomBrands();
 
             $random_datetime = Carbon::now()->subMinutes(rand(1, 55));
 
-            DB::table('teams')->insert([
+            DB::table('brands')->insert([
                 'name'=>$brands,
                 'country' => $countries,
                 'created_at' => $random_datetime,

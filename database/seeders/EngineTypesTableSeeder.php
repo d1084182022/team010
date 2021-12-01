@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\QueryException;
 
 class EngineTypesTableSeeder extends Seeder
 {
@@ -13,7 +14,7 @@ class EngineTypesTableSeeder extends Seeder
      *
      * @return void
      */
-    public function generateRandomEngineTypes()
+    public function generateRandomEngineTypes():string
     {
         $enginetypes = [
             '水冷四行程DOHC並列雙缸引擎',
@@ -32,7 +33,7 @@ class EngineTypesTableSeeder extends Seeder
             $enginetypes = $this->generateRandomEngineTypes();
             $random_datetime = Carbon::now()->subMinutes(rand(1, 55));
 
-            DB::table('teams')->insert([
+            DB::table('engine_types')->insert([
                 'engine_type'=>$enginetypes,
                 'created_at' => $random_datetime,
                 'updated_at' => $random_datetime
