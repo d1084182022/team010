@@ -15,9 +15,8 @@ class MotorcyclesController extends Controller
     public function index()
     {
         //
-      /**  return Motorcycle::all()->toArray();
-        return $motorcycle;*/
-        return view("motorcycles.index");
+       $motorcycles= Motorcycle::all();
+        return view("motorcycles.index")->with(['motorcycles'=>$motorcycles]);
     }
 
     /**

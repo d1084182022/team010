@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EngineType;
 use Illuminate\Http\Request;
 
 class EngineTypesController extends Controller
@@ -14,6 +15,9 @@ class EngineTypesController extends Controller
     public function index()
     {
         //
+
+        $enginetypes= enginetype::all();
+        return view("enginetypes.index")->with(['enginetypes'=>$enginetypes]);
     }
 
     /**

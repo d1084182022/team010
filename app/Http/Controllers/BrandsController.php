@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class BrandsController extends Controller
@@ -14,6 +15,8 @@ class BrandsController extends Controller
     public function index()
     {
         //
+        $brands= brand::all();
+        return view("brands.index")->with(['brands'=>$brands]);
     }
 
     /**
