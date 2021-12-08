@@ -12,6 +12,7 @@
         <th>車名</th>
         <th>售價</th>
         <th>操作</th>
+        <th>操作2</th>
     </tr>
 
     @foreach($motorcycles as $motorcycle)
@@ -20,11 +21,16 @@
             <td>{{$motorcycle->id}}</td>
             <td>{{$motorcycle->bid}}</td>
             <td>{{$motorcycle->name}}</td>
-            <td>{{$motorcycle->price}}萬</td>
+            <td>{{$motorcycle->price}}</td>
             <td>
             <a href="motorcycles/{{$motorcycle->id}}">
                 詳細資料
             </a>
+            </td>
+            <td>
+                <a href="motorcycles/{{$motorcycle->id}}/edit">
+                    修改
+                </a>
             </td>
         </tr>
     @endforeach

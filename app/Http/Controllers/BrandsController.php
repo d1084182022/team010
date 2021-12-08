@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Motorcycle;
 use Illuminate\Http\Request;
 
 class BrandsController extends Controller
@@ -61,6 +62,8 @@ class BrandsController extends Controller
     public function edit($id)
     {
         //
+        $brand=brand::FindOrFail($id);
+        return view("brands.edit")->with(['brand'=>$brand]);
     }
 
     /**
@@ -73,6 +76,7 @@ class BrandsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return "正式修改ID" .$id. "資料";
     }
 
     /**

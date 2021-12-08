@@ -10,7 +10,7 @@
         <th>編號</th>
         <th>廠牌</th>
         <th>國家</th>
-        <th>詳細資料</th>
+        <th>修改</th>
 
     </tr>
 
@@ -20,8 +20,8 @@
             <td>{{$brand->name}}</td>
             <td>{{$brand->country}}</td>
             <td>
-            <a href="brands/{{$brand->id}}">
-                詳細資料
+            <a href="brands/{{$brand->id}}/edit">
+                修改
             </a>
             </td>
         </tr>

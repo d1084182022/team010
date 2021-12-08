@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Motorcycle;
 use Illuminate\Http\Request;
 
@@ -51,6 +52,7 @@ class MotorcyclesController extends Controller
 
         $motorcycle=Motorcycle::FindOrFail($id);
         return view('motorcycles.show')->with(['motorcycle'=>$motorcycle]);
+
     }
 
     /**
@@ -62,6 +64,8 @@ class MotorcyclesController extends Controller
     public function edit($id)
     {
         //
+        $motorcycle=Motorcycle::FindOrFail($id);
+        return view('motorcycles.edit')->with(['motorcycle'=>$motorcycle]);
     }
 
     /**
@@ -74,6 +78,7 @@ class MotorcyclesController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return "正式修改" .$id. "的資料";
     }
 
     /**

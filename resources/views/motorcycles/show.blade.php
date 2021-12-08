@@ -25,7 +25,7 @@
     </tr>
     <tr>
         <td>CC數</td>
-        <td>{{$motorcycle->CC}}</td>
+        <td>{{$motorcycle->CC}}C.C</td>
     </tr>
     <tr>
         <td>引擎形式</td>
@@ -33,23 +33,23 @@
     </tr>
     <tr>
         <td>馬力</td>
-        <td>{{$motorcycle->horsepower}}</td>
+        <td>{{$motorcycle->horsepower}}Hp</td>
     </tr>
     <tr>
         <td>扭力</td>
-        <td>{{$motorcycle->torque}}</td>
+        <td>{{$motorcycle->torque}}Kgm</td>
     </tr>
     <tr>
         <td>油箱容量</td>
-        <td>{{$motorcycle->tank_capacity}}</td>
+        <td>{{$motorcycle->tank_capacity}}L</td>
     </tr>
     <tr>
         <td>座高</td>
-        <td>{{$motorcycle->sitting_height}}</td>
+        <td>{{$motorcycle->sitting_height}}mm</td>
     </tr>
     <tr>
         <td>售價</td>
-        <td>{{$motorcycle->price}}</td>
+        <td>{{$motorcycle->price}}萬</td>
     </tr>
 
 </table>

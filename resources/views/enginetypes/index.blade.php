@@ -19,9 +19,6 @@
             <td>{{$engine_type->id}}</td>
             <td>{{$engine_type->engine_type}}</td>
             <td>
-            <a href="enginetypes/{{$engine_type->id}}">
-                詳細資料
-            </a>
             </td>
         </tr>
     @endforeach
