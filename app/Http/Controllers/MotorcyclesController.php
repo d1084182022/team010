@@ -78,7 +78,20 @@ class MotorcyclesController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return "正式修改" .$id. "的資料";
+        $motorcycle = Motorcycle::findOrFail($id);
+        $motorcycle->bid = $request->input('bid');
+        $motorcycle->name = $request->input('name');
+        $motorcycle->year = $request->input('year');
+        $motorcycle->CC = $request->input('CC');
+        $motorcycle->eid = $request->input('eid');
+        $motorcycle->horsepower = $request->input('horsepower');
+        $motorcycle->torque = $request->input('torque');
+        $motorcycle->tank_capacity = $request->input('tank_capacity');
+        $motorcycle->sitting_height = $request->input('sitting_height');
+        $motorcycle->price = $request->input('price');
+        $motorcycle->save();
+
+        return redirect('motorcycles');
     }
 
     /**

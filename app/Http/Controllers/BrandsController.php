@@ -76,7 +76,12 @@ class BrandsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return "正式修改ID" .$id. "資料";
+        $brand = brand::findOrFail($id);
+        $brand->name = $request->input('name');
+        $brand->country = $request->input('country');
+        $brand->save();
+
+        return redirect('brands');
     }
 
     /**
