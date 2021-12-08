@@ -16,11 +16,11 @@
         </tr>
         <tr>
             <td>廠牌</td>
-            <td><input type="text" value="{{$brand->name}}"></td>
+            <td><input type="text" name="name" value="{{$brand->name}}"></td>
         </tr>
         <tr>
             <td>國家</td>
-            <td><input type="text" value="{{$brand->country}}"></td>
+            <td><input type="text" name="country" value="{{$brand->country}}"></td>
         </tr>
 
     </table>
