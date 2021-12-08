@@ -23,6 +23,7 @@
 
     @foreach($motorcycles as $motorcycle)
         <tr>
+            --
             <td>{{$motorcycle->id}}</td>
             <td>{{$motorcycle->bid}}</td>
             <td>{{$motorcycle->name}}</td>

@@ -9,6 +9,7 @@
     <tr>
         <th>編號</th>
         <th>引擎形式</th>
+        <th>詳細資料</th>
 
 
     </tr>
@@ -17,7 +18,11 @@
         <tr>
             <td>{{$engine_type->id}}</td>
             <td>{{$engine_type->engine_type}}</td>
-
+            <td>
+            <a href="enginetypes/{{$engine_type->id}}">
+                詳細資料
+            </a>
+            </td>
         </tr>
     @endforeach
 </table>
