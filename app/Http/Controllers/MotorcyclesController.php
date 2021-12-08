@@ -48,8 +48,9 @@ class MotorcyclesController extends Controller
      */
     public function show($id)
     {
-        //model
-        return '搜尋單一一筆資料 id=' .$id ;
+
+        $motorcycle=Motorcycle::FindOrFail($id);
+        return view('motorcycles.show')->with(['motorcycle'=>$motorcycle]);
     }
 
     /**
