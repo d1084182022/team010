@@ -28,6 +28,7 @@ class BrandsController extends Controller
     public function create()
     {
         //
+        return view("brands.create");
     }
 
     /**
@@ -39,6 +40,19 @@ class BrandsController extends Controller
     public function store(Request $request)
     {
         //
+
+        $name = $request->input('name');
+        $country = $request->input('country');
+
+
+        brand::create(
+            [
+                'name'=>$name,
+                'country'=>$country
+            ]
+        );
+
+        return redirect('brands');
     }
 
     /**
@@ -93,5 +107,8 @@ class BrandsController extends Controller
     public function destroy($id)
     {
         //
+        $brand = brand::findOrFail($id);
+        $brand->delete();
+        return redirect('brands');
     }
 }
