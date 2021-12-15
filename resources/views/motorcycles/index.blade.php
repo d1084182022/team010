@@ -27,7 +27,7 @@
         <th>操作</th>
         <th>操作2</th>
         <th>操作3</th>
-        <th>操作4</th>
+
     </tr>
 
     @foreach($motorcycles as $motorcycle)

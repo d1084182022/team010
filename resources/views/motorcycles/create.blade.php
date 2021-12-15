@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>新增單一一筆重機資料</h1>
-<form method="get">
+<form method="post" action="/motorcycles">
     @csrf
     <table border="1">
 
