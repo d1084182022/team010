@@ -5,6 +5,14 @@
 </head>
 <body>
 <h1>顯示所有各品牌代表重機車系資料</h1>
+<a href="brands">
+    廠牌資料<br>
+
+</a>
+<a href="enginetypes">
+    引擎形式資料<br>
+</a>
+
 <table border="1">
     <tr>
         <th>編號</th>
@@ -17,6 +25,7 @@
 
     @foreach($motorcycles as $motorcycle)
         <tr>
+
             --
             <td>{{$motorcycle->id}}</td>
             <td>{{$motorcycle->bid}}</td>
@@ -35,5 +44,6 @@
         </tr>
     @endforeach
 </table>
+
 </body>
 </html>
