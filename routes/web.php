@@ -3,6 +3,7 @@
 use App\Http\Controllers\MotorcyclesController;
 use App\Http\Controllers\BrandsController;
 use App\Http\Controllers\EngineTypesController;
+use App\Models\Motorcycle;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,7 +21,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return "Hello World";
+    
+    $motorcycles= Motorcycle::all();
+    return view("motorcycles.index")->with(['motorcycles'=>$motorcycles]);
 });
 route::resource("motorcycles", MotorcyclesController::class)  ;
 route::resource("brands", BrandsController::class)  ;
