@@ -103,5 +103,8 @@ class MotorcyclesController extends Controller
     public function destroy($id)
     {
         //
+        $motorcycle = Motorcycle::findOrFail($id);
+        $motorcycle->delete();
+        return redirect('motorcycles');
     }
 }

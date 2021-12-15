@@ -21,6 +21,7 @@
         <th>售價</th>
         <th>操作</th>
         <th>操作2</th>
+        <th>操作3</th>
     </tr>
 
     @foreach($motorcycles as $motorcycle)
@@ -40,6 +41,13 @@
                 <a href="motorcycles/{{$motorcycle->id}}/edit">
                     修改
                 </a>
+            </td>
+            <td>
+                <form method="post" action="motorcycles/{{$motorcycle->id}}">
+                    @csrf
+                    @method("delete")
+                    <input type="submit" value="刪除"/>
+                </form>
             </td>
         </tr>
     @endforeach
