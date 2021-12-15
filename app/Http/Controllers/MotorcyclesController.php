@@ -28,6 +28,7 @@ class MotorcyclesController extends Controller
     public function create()
     {
         //
+        return view("motorcycles.create");
     }
 
     /**
@@ -39,6 +40,34 @@ class MotorcyclesController extends Controller
     public function store(Request $request)
     {
         //
+
+        $bid = $request->input('bid');
+        $name = $request->input('name');
+        $year = $request->input('year');
+        $CC = $request->input('CC');
+        $eid = $request->input('eid');
+        $horsepower = $request->input('horsepower');
+        $torque = $request->input('torque');
+        $tank_capacity = $request->input('tank_capacity');
+        $sitting_height = $request->input('sitting_height');
+        $price = $request->input('price');
+
+        Motorcycle::create(
+            [
+            'bid' => $bid,
+            'name'=>$name,
+            'year'=>$year,
+            'CC'=>$CC,
+            'eid'=>$eid,
+            'horsepower'=>$horsepower,
+            'torque'=>$torque,
+            'tank_capacity'=>$tank_capacity,
+            'sitting_height'=>$sitting_height,
+            'price'=>$price
+        ]
+        );
+
+        return redirect('motorcycles');
     }
 
     /**

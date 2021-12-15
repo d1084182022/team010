@@ -43,9 +43,9 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/api.php'));
 
-            Route::pattern('motorcycle','[0-9]+');  //限制搜尋id只能用數字
-            Route::pattern('brand','[0-9]+');       //限制搜尋id只能用數字
-            Route::pattern('engine_type','[0-9]+'); //限制搜尋id只能用數字
+            Route::pattern('motorcycles','[0-9]+');  //限制搜尋id只能用數字
+            Route::pattern('brands','[0-9]+');       //限制搜尋id只能用數字
+            Route::pattern('enginetypes','[0-9]+'); //限制搜尋id只能用數字
 
             Route::middleware('web')
                 ->namespace($this->namespace)

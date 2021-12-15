@@ -13,6 +13,11 @@
     引擎形式資料<br>
 </a>
 
+<a href="motorcycles/create">
+    新增<br>
+</a>
+
+
 <table border="1">
     <tr>
         <th>編號</th>
@@ -22,6 +27,7 @@
         <th>操作</th>
         <th>操作2</th>
         <th>操作3</th>
+        <th>操作4</th>
     </tr>
 
     @foreach($motorcycles as $motorcycle)
@@ -49,6 +55,8 @@
                     <input type="submit" value="刪除"/>
                 </form>
             </td>
+
+
         </tr>
     @endforeach
 </table>
