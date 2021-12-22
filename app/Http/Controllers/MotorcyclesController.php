@@ -16,7 +16,7 @@ class MotorcyclesController extends Controller
     public function index()
     {
         //
-       $motorcycles= Motorcycle::all();
+       $motorcycles= Motorcycle::all()->sortBy('bid',SORT_REGULAR,false);
         return view("motorcycles.index")->with(['motorcycles'=>$motorcycles]);
     }
 
