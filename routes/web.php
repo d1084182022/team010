@@ -25,6 +25,7 @@ Route::get('/', function () {
 
     return redirect('motorcycles');
 });
+Route::get('motorcycles/senior', [MotorcyclesController::class, 'senior'])->name('motorcycles.senior');
 route::resource("motorcycles", MotorcyclesController::class)  ;
 route::resource("brands", BrandsController::class)  ;
 route::resource("enginetypes", EngineTypesController::class)  ;

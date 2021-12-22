@@ -11,7 +11,7 @@
 <a href="enginetypes">
     引擎形式資料<br>
 </a>
-
+<a href="{{ route('motorcycles.senior') }}">超過80萬</a>
 <a href="motorcycles/create">
     新增重機<br>
 </a>

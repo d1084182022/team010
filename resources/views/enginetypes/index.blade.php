@@ -8,7 +8,7 @@
 <a href="motorcycles">
     重機資料<br>
 </a>
-<a href="brands">
+<a href="{{ route('brands.index') }}">
     廠牌資料<br>
 </a>
 <a href="enginetypes/create">

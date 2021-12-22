@@ -136,4 +136,10 @@ class MotorcyclesController extends Controller
         $motorcycle->delete();
         return redirect('motorcycles');
     }
+
+    public function senior()
+    {
+        $motorcycle = Motorcycle::senior()->get();
+        return view("motorcycles.index")->with(['motorcycles'=>$motorcycle]);
+    }
 }
