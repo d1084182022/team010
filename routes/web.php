@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $motorcycles= Motorcycle::all();
-    return view("motorcycles.index")->with(['motorcycles'=>$motorcycles]);
+
+    return redirect('motorcycles');
 });
 route::resource("motorcycles", MotorcyclesController::class)  ;
 route::resource("brands", BrandsController::class)  ;

@@ -21,5 +21,14 @@ class Motorcycle extends Model
         'price'
     ];
 
+    public function brand()
+    {
+        return $this->belongsTo('App\Models\Brand','bid','id');
+    }
+    public function enginetype()
+    {
+        return $this->belongsTo('App\Models\EngineType','eid','id');
+    }
+
 
 }

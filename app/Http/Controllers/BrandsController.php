@@ -64,7 +64,8 @@ class BrandsController extends Controller
     public function show($id)
     {
         //
-        return '搜尋單一一筆資料 id=' .$id ;
+        $brand=brand::FindOrFail($id);
+        return view('brands.show')->with(['brand'=>$brand]);
     }
 
     /**
