@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Brand;
 use App\Models\EngineType;
-use App\Models\Motorcycle;
 use Illuminate\Http\Request;
 
 class EngineTypesController extends Controller
@@ -61,8 +60,7 @@ class EngineTypesController extends Controller
     public function show($id)
     {
         //
-        $engine_type = enginetype::findOrFail($id);
-        return view('enginetypes.show')->with(['engine_type'=>$engine_type]);
+        return '搜尋單一一筆資料 id=' .$id ;
     }
 
     /**

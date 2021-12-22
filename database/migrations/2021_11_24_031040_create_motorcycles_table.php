@@ -19,7 +19,7 @@ class CreateMotorcyclesTable extends Migration
             $table->string('name')->comment('車名');
             $table->integer('year')->nullable()->comment('製造年份');
             $table->integer('CC')->unsigned()->nullable()->comment('CC數');
-            $table->foreignId('eid')->comment('引擎形式');
+            $table->integer('eid')->unsigned()->comment('引擎形式');
             $table->double('horsepower')->unsigned()->nullable()->comment('馬力');
             $table->double('torque')->unsigned()->nullable()->comment('扭力');
             $table->double('tank_capacity')->unsigned()->nullable()->comment('油箱容量');
@@ -28,7 +28,7 @@ class CreateMotorcyclesTable extends Migration
             $table->timestamps();
 
             $table->foreign('bid')->references('id')->on('brands')->onDelete('cascade');
-            $table->foreign('eid')->references('id')->on('engine_types')->onDelete('cascade');
+
 
         });
     }

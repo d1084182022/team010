@@ -5,21 +5,14 @@
 </head>
 <body>
 <h1>顯示所有引擎資料</h1>
-<a href="motorcycles">
-    重機資料<br>
-</a>
-<a href="brands">
-    廠牌資料<br>
-</a>
 <a href="enginetypes/create">
-    新增引擎形式<br>
+    新增<br>
 </a>
 
 <table border="1">
     <tr>
         <th>編號</th>
         <th>引擎形式</th>
-        <th>詳細</th>
         <th>修改</th>
         <th>刪除</th>
 
@@ -29,11 +22,6 @@
         <tr>
             <td>{{$engine_type->id}}</td>
             <td>{{$engine_type->engine_type}}</td>
-            <td>
-                <a href="enginetypes/{{$engine_type->id}}">
-                    詳細資料
-                </a>
-            </td>
             <td>
                 <a href="enginetypes/{{$engine_type->id}}/edit">
                     修改

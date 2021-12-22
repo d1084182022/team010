@@ -7,14 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
-    use HasFactory;
     protected $fillable=[
         'name',
         'country'
     ];
-    public function motorcycle()
-    {
-        return $this->hasMany('App\Models\Motorcycle','bid');
-    }
-
+    use HasFactory;
 }
