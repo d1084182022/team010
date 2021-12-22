@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\EngineType;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class EngineTypesController extends Controller
     public function create()
     {
         //
+        return view("enginetypes.create");
     }
 
     /**
@@ -39,6 +41,14 @@ class EngineTypesController extends Controller
     public function store(Request $request)
     {
         //
+        $engine_type = $request->input('engine_type');
+        enginetype::create(
+            [
+                'engine_type'=>$engine_type
+            ]
+        );
+
+        return redirect('enginetypes');
     }
 
     /**
@@ -62,6 +72,8 @@ class EngineTypesController extends Controller
     public function edit($id)
     {
         //
+        $engine_type = enginetype::findOrFail($id);
+        return view("enginetypes.edit")->with(['engine_type'=>$engine_type]);
     }
 
     /**
@@ -74,6 +86,11 @@ class EngineTypesController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $engine_type = enginetype::findOrFail($id);
+        $engine_type->engine_type = $request->input('engine_type');
+        $engine_type->save();
+
+        return redirect('enginetypes');
     }
 
     /**
@@ -85,5 +102,8 @@ class EngineTypesController extends Controller
     public function destroy($id)
     {
         //
+        $enginetypes = enginetype::findOrFail($id);
+        $enginetypes->delete();
+        return redirect('enginetypes');
     }
 }

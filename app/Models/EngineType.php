@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class EngineType extends Model
 {
     protected $fillable=[
-        'name'
+        'engine_type'
     ];
     use HasFactory;
 }
