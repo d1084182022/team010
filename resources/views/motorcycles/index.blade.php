@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>顯示所有各品牌代表重機車系資料</h1>
-<a href="brands">
+<a href="{{ route('brands.index') }}">
     廠牌資料<br>
 </a>
 <a href="enginetypes">
