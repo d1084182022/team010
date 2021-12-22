@@ -15,7 +15,7 @@ class CreateMotorcyclesTable extends Migration
     {
         Schema::create('motorcycles', function (Blueprint $table) {
             $table->id();
-            $table->integer('bid')->unsigned()->comment('廠牌');
+            $table->foreignId('bid')->comment('廠牌');
             $table->string('name')->comment('車名');
             $table->integer('year')->nullable()->comment('製造年份');
             $table->integer('CC')->unsigned()->nullable()->comment('CC數');
@@ -26,6 +26,10 @@ class CreateMotorcyclesTable extends Migration
             $table->double('sitting_height')->unsigned()->nullable()->comment('座高');
             $table->integer('price')->unsigned()->nullable()->comment('售價');
             $table->timestamps();
+
+            $table->foreign('bid')->references('id')->on('brands')->onDelete('cascade');
+
+
         });
     }
 

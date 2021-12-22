@@ -20,7 +20,16 @@
         </tr>
         <tr>
             <td>國家</td>
-            <td><input type="text" name="country" value="{{$brand->country}}"></td>
+            <td>
+                <input type="radio" name="country" value="日本">
+                <label for="日本">日本</label><br>
+                <input type="radio" name="country" value="義大利">
+                <label for="義大利">義大利</label><br>
+                <input type="radio" name="country" value="德國">
+                <label for="德國">德國</label><br>
+                <input type="radio" name="country" value="奧地利">
+                <label for="奧地利">奧地利</label><br>
+            </td>
         </tr>
 
     </table>

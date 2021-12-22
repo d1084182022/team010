@@ -21,4 +21,5 @@ class Motorcycle extends Model
         'price'
     ];
 
+
 }
