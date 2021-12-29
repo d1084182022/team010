@@ -16,7 +16,7 @@ class MotorcyclesController extends Controller
     public function index()
     {
         //
-       $motorcycles= Motorcycle::all()->sortBy('bid',SORT_REGULAR,false);
+       $motorcycles= Motorcycle::all()->sortBy('bid',SORT_REGULAR,false); //使用sortyBy使motorcycle.index的bid由小到大排序
         return view("motorcycles.index")->with(['motorcycles'=>$motorcycles]);
     }
 

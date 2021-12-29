@@ -39,16 +39,8 @@
             <td>{{$motorcycle->eid}}</td>
             <td>{{$motorcycle->name}}</td>
             <td>{{$motorcycle->price}}</td>
-            <td>
-            <a href="motorcycles/{{$motorcycle->id}}">
-                詳細資料
-            </a>
-            </td>
-            <td>
-                <a href="motorcycles/{{$motorcycle->id}}/edit">
-                    修改
-                </a>
-            </td>
+            <td><a href="{{ route('motorcycles.show', ['motorcycle'=>$motorcycle->id]) }}">顯示詳細資料</a></td>
+            <td><a href="{{ route('motorcycles.edit', ['motorcycle'=>$motorcycle->id]) }}">修改資料</a></td>
             <td>
                 <form method="post" action="motorcycles/{{$motorcycle->id}}">
                     @csrf

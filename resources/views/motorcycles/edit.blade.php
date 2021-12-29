@@ -16,7 +16,7 @@
     </tr>
     <tr>
         <td>廠牌</td>
-        <td><input type="text" name="bid" value="{{$motorcycle->bid}}"></td>
+        <td><input type="number" name="bid" value="{{$motorcycle->bid}}" min="1" max="9"></td>
     </tr>
     <tr>
         <td>車名</td>
@@ -108,7 +108,7 @@
     </tr>
     <tr>
         <td>引擎形式</td>
-        <td><input type="text" name="eid" value="{{$motorcycle->eid}}"></td>
+        <td><input type="number" name="eid" value="{{$motorcycle->eid}}" min="1" max="7"></td>
     </tr>
     <tr>
         <td>馬力</td>

@@ -29,16 +29,8 @@
         <tr>
             <td>{{$engine_type->id}}</td>
             <td>{{$engine_type->engine_type}}</td>
-            <td>
-                <a href="enginetypes/{{$engine_type->id}}">
-                    詳細資料
-                </a>
-            </td>
-            <td>
-                <a href="enginetypes/{{$engine_type->id}}/edit">
-                    修改
-                </a>
-            </td>
+            <td><a href="{{ route('enginetypes.show', ['enginetype'=>$engine_type->id]) }}">詳細資料</a></td>
+            <td><a href="{{ route('enginetypes.edit', ['enginetype'=>$engine_type->id]) }}">修改資料</a></td>
             <td>
                 <form method="post" action="enginetypes/{{$engine_type->id}}">
                     @csrf

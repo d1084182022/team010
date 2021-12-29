@@ -30,16 +30,8 @@
             <td>{{$brand->id}}</td>
             <td>{{$brand->name}}</td>
             <td>{{$brand->country}}</td>
-            <td>
-                <a href="brands/{{$brand->id}}">
-                    詳細資料
-                </a>
-            </td>
-            <td>
-            <a href="brands/{{$brand->id}}/edit">
-                修改
-            </a>
-            </td>
+            <td><a href="{{ route('brands.show', ['brand'=>$brand->id]) }}">詳細資料</a></td>
+            <td><a href="{{ route('brands.edit', ['brand'=>$brand->id]) }}">修改資料</a></td>
             <td>
                 <form method="post" action="brands/{{$brand->id}}">
                     @csrf
