@@ -8,10 +8,12 @@
 <a href="{{ route('brands.index') }}">
     廠牌資料<br>
 </a>
-<a href="enginetypes">
+<a href="{{ route('enginetypes.index') }}">
     引擎形式資料<br>
 </a>
-<a href="{{ route('motorcycles.senior') }}">超過80萬</a>
+
+<a href="{{ route('motorcycles.expensive') }}">超過80萬</a>
+<a href="{{ route('motorcycles.yamaha') }}">廠牌是Yamaha</a>
 <a href="motorcycles/create">
     新增重機<br>
 </a>

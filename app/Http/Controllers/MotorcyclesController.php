@@ -137,9 +137,14 @@ class MotorcyclesController extends Controller
         return redirect('motorcycles');
     }
 
-    public function senior()
+    public function expensive()
     {
-        $motorcycle = Motorcycle::senior()->get();
+        $motorcycle = Motorcycle::expensive()->get();
+        return view("motorcycles.index")->with(['motorcycles'=>$motorcycle]);
+    }
+    public function yamaha()
+    {
+        $motorcycle = Motorcycle::yamaha()->get();
         return view("motorcycles.index")->with(['motorcycles'=>$motorcycle]);
     }
 }

@@ -29,10 +29,15 @@ class Motorcycle extends Model
     {
         return $this->belongsTo('App\Models\EngineType','eid','id');
     }
-    public function scopeSenior($query)
+    public function scopeexpensive($query)
     {
         $query->where('price', '>', 80)
             ->orderBy('price');
+    }
+    public function scopeyamaha($query)
+    {
+        $query->where('bid', '=', 7);
+
     }
 
 }
