@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\EngineType;
 use App\Models\Motorcycle;
 use Illuminate\Http\Request;
 
@@ -28,7 +29,9 @@ class MotorcyclesController extends Controller
     public function create()
     {
         //
-        return view("motorcycles.create");
+        $brands= brand::all();
+        $enginetypes= enginetype::all();
+        return view("motorcycles.create")->with(['brands'=>$brands])->with(['enginetypes'=>$enginetypes]);;
     }
 
     /**
@@ -94,7 +97,9 @@ class MotorcyclesController extends Controller
     {
         //
         $motorcycle=Motorcycle::FindOrFail($id);
-        return view('motorcycles.edit')->with(['motorcycle'=>$motorcycle]);
+        $brands= brand::all();
+        $enginetypes= enginetype::all();
+        return view("motorcycles.edit")->with(['motorcycle'=>$motorcycle])->with(['brands'=>$brands])->with(['enginetypes'=>$enginetypes]);;
     }
 
     /**

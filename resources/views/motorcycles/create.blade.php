@@ -12,7 +12,11 @@
         <tr>
             <td>廠牌</td>
             <td>
-                <input type="text" name="bid" required>
+                <select name="bid" required>
+                    @foreach($brands as $brand)
+                    <option value={{$brand->id}}>{{$brand->name}}</option>
+                    @endforeach
+                </select>
             </td>
         </tr>
         <tr>
@@ -54,7 +58,13 @@
         </tr>
         <tr>
             <td>引擎形式</td>
-            <td><input type="text" name="eid"></td>
+            <td>
+                <select name="eid" required>
+                    @foreach($enginetypes as $engine_type)
+                        <option value={{$engine_type->id}}>{{$engine_type->engine_type}}</option>
+                    @endforeach
+                </select>
+            </td>
         </tr>
         <tr>
             <td>馬力</td>
