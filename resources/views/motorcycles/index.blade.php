@@ -38,7 +38,7 @@
             --
             <td>{{$motorcycle->id}}</td>
             <td>{{$motorcycle->brand->name}}</td>
-            <td>{{$motorcycle->eid}}</td>
+            <td>{{$motorcycle->enginetype->id}}</td>
             <td>{{$motorcycle->name}}</td>
             <td>{{$motorcycle->price}}</td>
             <td><a href="{{ route('motorcycles.show', ['motorcycle'=>$motorcycle->id]) }}">顯示詳細資料</a></td>
