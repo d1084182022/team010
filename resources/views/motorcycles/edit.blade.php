@@ -19,53 +19,12 @@
         <td>
             <select name="bid" checked>
                 @foreach($brands as $brand)
-                    <option value={{$brand->id}}>{{$brand->name}}</option>
+                    @if($motorcycle->bid==$brand->id)
+                        <option value={{$brand->id}} selected>{{$motorcycle->brand->name}}</option>
+                    @else
+                        <option value={{$brand->id}}>{{$brand->name}}</option>
+                    @endif
                 @endforeach
-                    @if($motorcycle->bid=='1')
-                        <option value="1" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="1">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='2')
-                        <option value="2" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="2">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='3')
-                        <option value="3" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="3">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='4')
-                        <option value="4" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="4">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='5')
-                        <option value="5" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="5">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='6')
-                        <option value="6" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="6">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='7')
-                        <option value="7" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="7">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='8')
-                        <option value="8" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="8">{{$brand->name}}</option>
-                    @endif
-                    @if($motorcycle->bid=='9')
-                        <option value="9" selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value="9">{{$brand->name}}</option>
-                    @endif
 
             </select>
         </td>
@@ -163,43 +122,13 @@
         <td>
             <select name="eid" checked>
                 @foreach($enginetypes as $engine_type)
-                    <option value={{$engine_type->id}}>{{$engine_type->engine_type}}</option>
+                    @if($motorcycle->eid==$engine_type->id)
+                        <option value={{$engine_type->id}} selected>{{$motorcycle->enginetype->engine_type}}</option>
+                    @else
+                        <option value={{$engine_type->id}}>{{$engine_type->engine_type}}</option>
+                    @endif
                 @endforeach
-                @if($motorcycle->eid=='1')
-                    <option value="1" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="1">{{$engine_type->engine_type}}</option>
-                @endif
-                @if($motorcycle->eid=='2')
-                    <option value="2" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="2">{{$engine_type->engine_type}}</option>
-                @endif
-                @if($motorcycle->eid=='3')
-                    <option value="3" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="3">{{$engine_type->engine_type}}</option>
-                @endif
-                @if($motorcycle->eid=='4')
-                    <option value="4" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="4">{{$engine_type->engine_type}}</option>
-                @endif
-                @if($motorcycle->eid=='5')
-                    <option value="5" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="5">{{$engine_type->engine_type}}</option>
-                @endif
-                @if($motorcycle->eid=='6')
-                    <option value="6" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="6">{{$engine_type->engine_type}}</option>
-                @endif
-                @if($motorcycle->eid=='7')
-                    <option value="7" selected>{{$motorcycle->enginetype->engine_type}}</option>
-                @else
-                    <option value="7">{{$engine_type->engine_type}}</option>
-                @endif
+
             </select>
         </td>
 

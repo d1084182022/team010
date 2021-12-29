@@ -12,8 +12,8 @@
     引擎形式資料<br>
 </a>
 
-<a href="{{ route('motorcycles.expensive') }}">超過80萬</a>
-<a href="{{ route('motorcycles.yamaha') }}">廠牌是Yamaha</a>
+<a href="{{ route('motorcycles.expensive') }}">超過80萬<br></a>
+<a href="{{ route('motorcycles.yamaha') }}">廠牌是Yamaha<br></a>
 <a href="motorcycles/create">
     新增重機<br>
 </a>
