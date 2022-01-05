@@ -36,8 +36,7 @@ class Motorcycle extends Model
     }
     public function scopeyamaha($query)
     {
-        $query->where('bid', '=', 7);
-
+        $query->where('bid', '=', 8);
     }
 
 }

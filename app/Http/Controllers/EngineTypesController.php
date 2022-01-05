@@ -108,4 +108,53 @@ class EngineTypesController extends Controller
         $enginetypes->delete();
         return redirect('enginetypes');
     }
+
+    public function api_enginetypes()
+    {
+        return enginetype::all();
+    }
+
+    public function api_update(Request $request)
+    {
+        $enginetypes = enginetype::find($request->input('id'));
+        if ($enginetypes == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        $enginetypes->engine_type = $request->input('engine_type');
+
+        if ($enginetypes->save())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        } else {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+    }
+
+    public function api_delete(Request $request)
+    {
+        $enginetypes = enginetype::find($request->input('id'));
+
+        if ($enginetypes == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        if ($enginetypes->delete())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
+
+    }
 }

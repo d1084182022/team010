@@ -17,16 +17,15 @@
     <tr>
         <td>廠牌</td>
         <td>
-            <select name="bid" checked>
-                @foreach($brands as $brand)
-                    @if($motorcycle->bid==$brand->id)
-                        <option value={{$brand->id}} selected>{{$motorcycle->brand->name}}</option>
-                    @else
-                        <option value={{$brand->id}}>{{$brand->name}}</option>
-                    @endif
-                @endforeach
-
-            </select>
+            @foreach($brands as $brand)
+                @if($motorcycle->bid==$brand->id)
+                    <input type="radio" name="bid" value="{{$brand->id}}" checked>
+                    {{$brand->name}}
+                @else
+                    <input type="radio" name="bid" value="{{$brand->id}}" >
+                    {{$brand->name}}
+                @endif
+            @endforeach
         </td>
     </tr>
     <tr>
