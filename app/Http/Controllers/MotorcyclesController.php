@@ -152,4 +152,61 @@ class MotorcyclesController extends Controller
         $motorcycle = Motorcycle::yamaha()->get();
         return view("motorcycles.index")->with(['motorcycles'=>$motorcycle]);
     }
+
+    public function api_motorcycles()
+    {
+        return Motorcycle::all();
+    }
+
+    public function api_update(Request $request)
+    {
+        $motorcycle = Motorcycle::find($request->input('id'));
+        if ($motorcycle == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        $motorcycle->bid = $request->input('bid');
+        $motorcycle->name = $request->input('name');
+        $motorcycle->CC = $request->input('CC');
+        $motorcycle->eid = $request->input('eid');
+        $motorcycle->horsepower = $request->input('horsepower');
+        $motorcycle->torque = $request->input('torque');
+        $motorcycle->tank_capacity = $request->input('tank_capacity');
+        $motorcycle->sitting_height = $request->input('sitting_height');
+        $motorcycle->price = $request->input('price');
+
+        if ($motorcycle->save())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        } else {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+    }
+
+    public function api_delete(Request $request)
+    {
+        $motorcycle = Motorcycle::find($request->input('id'));
+
+        if ($motorcycle == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        if ($enginetypes->delete())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
+
+    }
 }
