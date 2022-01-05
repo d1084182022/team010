@@ -1,16 +1,8 @@
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>顯示所有廠牌資料</title>
-</head>
-<body>
+@extends('app')
+@section('title', '顯示所有廠牌資料')
+
+@section('motorcycles_contents')
 <h1>顯示所有廠牌資料</h1>
-<a href="enginetypes">
-    引擎形式資料<br>
-</a>
-<a href="motorcycles">
-    重機資料<br>
-</a>
 <a href="brands/create">
     新增廠牌<br>
 </a>
@@ -42,5 +34,4 @@
         </tr>
     @endforeach
 </table>
-</body>
-</html>
+@endsection

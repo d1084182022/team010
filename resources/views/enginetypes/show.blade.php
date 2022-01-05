@@ -1,10 +1,8 @@
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>顯示單一廠牌資料</title>
-</head>
-<body>
-<h1>顯示單一廠牌資料</h1>
+@extends('app')
+@section('title', '顯示一筆引擎形式資料與使用這種引擎的車種')
+
+@section('motorcycles_contents')
+<h1>顯示一筆引擎形式資料與使用這種引擎的車種</h1>
 <table border="1">
 
     <tr>
@@ -48,5 +46,4 @@
         </tr>
     @endforeach
 </table>
-</body>
-</html>
+@endsection

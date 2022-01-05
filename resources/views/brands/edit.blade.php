@@ -1,9 +1,7 @@
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>修改廠牌資料</title>
-</head>
-<body>
+@extends('app')
+@section('title', '修改一筆廠牌資料')
+
+@section('motorcycles_contents')
 <h1>修改單一廠牌資料</h1>
 <form method="post" action="/brands/{{$brand->id}}">
     @csrf
@@ -36,5 +34,4 @@
     <input type="submit" value="修改">
     <input type="reset" value="重新輸入">
 </form>
-</body>
-</html>
+@endsection

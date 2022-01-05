@@ -1,9 +1,8 @@
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>單一新增重機資料</title>
-</head>
-<body>
+@extends('app')
+@section('title', '新增一筆重機資料')
+
+@section('motorcycles_contents')
+
 <h1>新增單一一筆重機資料</h1>
 <form method="post" action="/motorcycles">
     @csrf
@@ -91,5 +90,4 @@
     <input type="submit" value="新增">
     <input type="reset" value="重新輸入">
 </form>
-</body>
-</html>
+@endsection

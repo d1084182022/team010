@@ -1,9 +1,7 @@
-<html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>顯示單一廠牌資料</title>
-</head>
-<body>
+@extends('app')
+@section('title', '顯示一筆廠牌資料與這廠牌的重機')
+
+@section('motorcycles_contents')
 <h1>顯示單一廠牌資料</h1>
 <table border="1">
 
@@ -51,5 +49,4 @@
         </tr>
     @endforeach
 </table>
-</body>
-</html>
+@endsection
