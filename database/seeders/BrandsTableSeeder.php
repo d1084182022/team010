@@ -40,15 +40,24 @@ class BrandsTableSeeder extends Seeder
     }
     public function run()
     {
-        //
+
+        $brand = ['Aprilia',
+            'BMW',
+            'Ducati',
+            'Honda',
+            'KTM',
+            'Kawasaki',
+            'Suzuki',
+            'Yamaha'];
+
         for ($i=0; $i<8; $i++) {
             $countries = $this->generateRandomCountries();
-            $brands=$this->generateRandomBrands();
+
 
             $random_datetime = Carbon::now()->subMinutes(rand(1, 55));
 
             DB::table('brands')->insert([
-                'name'=>$brands,
+                'name'=>$brand[$i],
                 'country' => $countries,
                 'created_at' => $random_datetime,
                 'updated_at' => $random_datetime
