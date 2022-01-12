@@ -201,7 +201,7 @@ class MotorcyclesController extends Controller
             ]);
         }
 
-        if ($enginetypes->delete())
+        if ($motorcycle->delete())
         {
             return response()->json([
                 'status' => 1,
